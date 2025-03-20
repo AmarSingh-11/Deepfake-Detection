@@ -1,0 +1,504 @@
+:root {
+  --main_color: brown;
+}
+html {
+}
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Playfair Display";
+}
+/* override bootatrap classes */
+.navbar {
+  font-family: "Playfair Display";
+  padding-left: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  /*   height:50px; */
+}
+.collapse {
+  height: 100% !important;
+}
+.navbar-nav {
+  height: 100%;
+}
+.nav-link {
+  color: white !important;
+  font-size: large;
+  display: block !important;
+  margin-left: 10px;
+  padding: 1rem !important;
+}
+
+.bg {
+  background-color: brown !important;
+}
+
+.navbar-brand {
+  padding: 5px;
+  background-color: white;
+  color: var(--main_color) !important;
+}
+
+li:hover {
+  background-color: maroon;
+}
+.fade-transition {
+  background-color: black;
+  /*   position:absolute;
+  top:0;left:0; */
+  display: flex;
+  height: 79.3vh;
+  width: 100%;
+  margin-top:4.7%;
+}
+
+.image {
+width:50%;
+float: right;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.caption {
+  float: left;
+  color: white;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Playfair Display";
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  
+}
+
+.im {
+width: 90%;
+height: 90%;
+object-fit: cover;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+  width:200px;
+}
+
+.cool-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.cool-button::before, .cool-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transition: 0.5s;
+  mix-blend-mode: overlay;
+}
+
+.cool-button:hover::before, .cool-button:hover::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cool-button::after {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.cool-button:hover::after {
+  opacity: 1;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Glowing effect */
+.cool-button:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(255, 255, 255, 0.3);
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.7), 0 0 70px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Button 1 */
+.btn-1 {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  animation: gradient 3s infinite alternate;
+}
+
+.btn-1::before {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.btn-1::after {
+  background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+  clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+}
+
+.prev-caption {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+}
+.next-caption {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+}
+
+.scroll-down {
+  position: absolute;
+  width: auto;
+  height: 50px;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  font-family: "Playfair Display";
+}
+.scroll-down p {
+  margin: 0;
+  font-family: "Playfair Display";
+}
+.scroll-down i {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: scroll_down;
+  animation-duration: 0.5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll_down {
+  0% {
+    top: 80%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.section-title {
+  box-sizing: border-box;
+  text-align: left;
+  margin: 10px;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  color: var(--main_color);
+}
+.section-tables {
+  top: 100vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.table-content {
+  position: relative;
+  height: 100%;
+  width: 22%;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  opacity: 0;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.table-content img {
+  max-width: 90%;
+  max-height: 100%;
+  box-shadow: 2px 5px 5px grey;
+}
+
+.desc {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+.desc p {
+  height: 50%;
+  margin: auto;
+  width: 90%;
+  font-size: 1.5 em;
+  font-family: "Playfair Display";
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.desc p:nth-child(1) {
+  text-decoration-line: line-through;
+}
+.desc button {
+  width: 50%;
+  height: 40px;
+  margin-top: 5%;
+  background-color: transparent;
+  border: 3px solid var(--main_color);
+  font-size: 1 rem;
+  font-weight: bold;
+  font-family: "Playfair Display";
+  cursor: pointer;
+}
+.sale-badge {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+}
+.section-why {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.why-div {
+  width: 30%;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Playfair Display";
+  opacity: 0;
+}
+
+.why-div :nth-child(2) {
+  font-size: 1em;
+  font-weight: bold;
+}
+.why-div :nth-child(3) {
+  font-size: 1em;
+  font-weight: bold;
+}
+.why-div img {
+  width: 80px;
+  height: 30%;
+}
+
+.customers-div {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.customers-div img {
+  width: 7em;
+  height: 7em;
+}
+
+.section-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+}
+.div-review {
+  width: 22%;
+  height: 100%;
+  /*     border: 1px solid var(--main_color);
+    box-shadow:2px 2px 2px var(--main_color); */
+  font-family: "Playfair Display";
+  opacity: 0;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.div-review img {
+  width: 100%;
+  height: 50%;
+  box-shadow: 2px 5px 5px grey;
+}
+.div-review h3 {
+  width: 100%;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.div-review p {
+  color: gray;
+}
+.div-review p,
+q {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main_color);
+  color: white;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+footer div {
+  width: 20%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  font-size: 3vw;
+}
+
+a:visited {
+  color: white;
+}
+i:hover {
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  li {
+    border-bottom: 1px solid black;
+  }
+
+  .section-tables {
+    /* position: absolute; */
+    display: block;
+    /* top:100vh; */
+    padding: 0;
+  }
+  .table-content {
+    height: 80%;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 0;
+  }
+  .table-content img:nth-child(2) {
+    height: 50%;
+    width: 100%;
+  }
+  .section-title {
+    font-size: 2em;
+    color: var(--main_color);
+  }
+
+  .desc {
+    padding: 5px;
+  }
+  .desc p {
+    font-size: 1.5em;
+  }
+  .desc button {
+    width: 30%;
+    height: 40px;
+    margin: 15px;
+    box-sizing: border-box;
+    font-size: large;
+  }
+  .section-why {
+    display: block;
+  }
+  .why-div {
+    opacity: 0;
+    width: 90%;
+  }
+  .why-div img {
+    width: 80px;
+    height: 80px;
+  }
+  .why-div :nth-child(2) {
+    font-size: 1.5em;
+  }
+  .why-div :nth-child(3) {
+    font-size: 1em;
+  }
+  .customers-div img {
+    width: 4em;
+    height: 4em;
+  }
+  .section-reviews {
+    display: block;
+  }
+  .div-review {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 1em;
+    opacity: 0;
+  }
+  .div-review img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  footer {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .caption {
+    font-size: 1.5rem;
+  }
+}

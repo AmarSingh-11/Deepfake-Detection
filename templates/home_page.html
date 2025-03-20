@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DeepFake Detection</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="{{url_for('static',filename='home_page_style.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+
+  <nav class="navbar navbar-expand-md bg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#"><img src="/static/Logo.png" width="110" height="30" class="im1"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/detection">Demo</a>
+        </li>
+       </ul>
+    </div>
+  </nav>
+
+  <div class="fade-transition">
+    <div class="caption">
+      <h1> Deepfake Detection </h1>
+      <p>"Deepfakes are not just a threat to our personal privacy, but to the very concept of truth itself."</p>
+      <div class="button-container">
+              <button class="cool-button btn-1" onclick="demo()">Get Started</button>
+          </div>
+    </div>
+    <div class="image">
+    <img src="/static/face.png" class="im">
+    </div>
+    
+  </div>
+
+  <footer>
+    <p>DeepFake Detection App Developed by Amar Singh</p>
+    <div>
+      
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/66227f2fb9.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+</body>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script><script type="module" src="./script.js"></script>
+<script>
+function demo() {
+window.location.href = "/detection";
+}
+</script>
+
+</body>
+</html>

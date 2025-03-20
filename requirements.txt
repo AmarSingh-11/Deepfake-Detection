@@ -1,0 +1,11 @@
+torch
+torchvision
+torchsummary
+facenet-pytorch
+numpy
+opencv-python
+Pillow
+Flask
+tqdm
+matplotlib
+flask-cors

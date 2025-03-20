@@ -65,10 +65,6 @@ cd deepfake-detection
 pip install -r requirements.txt
 ```
 
-### **3️⃣ Run Training Script**
-```bash
-python train.py
-```
 
 ### **4️⃣ Run the Web Interface**
 ```bash
@@ -92,7 +88,7 @@ The project includes a **Flask-based web app** where users can upload an image o
 ```python
 import requests
 
-url = "http://localhost:5000/predict"
+url = "http://localhost:5000//DetectImage"
 files = {"file": open("test_image.jpg", "rb")}
 response = requests.post(url, files=files)
 
@@ -103,7 +99,7 @@ print(response.json())
 ```python
 import requests
 
-url = "http://localhost:5000/predict_video"
+url = "http://localhost:5000/Detect"
 files = {"file": open("test_video.mp4", "rb")}
 response = requests.post(url, files=files)
 

@@ -167,7 +167,7 @@ def DetectPage():
         if len(faces) < 3:
             return jsonify({"error": "Not enough frames extracted (need at least 3)", "Score": "N/A", "Pred": "No Face Found"})
 
-        frame_2_path = faces[2]  # Use only frame_2
+        frame_2_path = faces[4]  # Use only frame_2
 
         classification, confidence = predict_fake_or_real(frame_2_path)
 

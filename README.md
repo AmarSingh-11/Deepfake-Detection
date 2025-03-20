@@ -14,6 +14,10 @@ The dataset consists of real and fake images collected from multiple sources, en
 - **LivePortrait GitHub** (Animated fake images from real dataset)
 - **Stable Diffusion AI**
 
+### 🔗 External Resources Used:
+- [LivePortrait](https://github.com/KwaiVGI/LivePortrait) - Used to generate animated fake images for deepfake detection.
+
+
 ### **Dataset Distribution**:
 | Set          | Total Images | Fake | Real |
 |-------------|-------------|------|------|
@@ -114,6 +118,7 @@ print(response.json())
 - ✨ Enhance **mobile-friendly deployment**
 
 ---
+
 
 ## 👤 Author
 - **Amar Singh**  

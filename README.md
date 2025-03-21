@@ -72,10 +72,10 @@ cd deepfake-detection
 
 ### **2️⃣ Create and Activate a Virtual Environment**
 ```bash
-python -m venv deepfake-env
+python3 -m venv deefake-env
+
 source deepfake-env/bin/activate  # On macOS/Linux
-# On Windows, use:
-# deepfake-env\Scripts\activate
+source deefake-env/bin/activate
 ```
 
 ### **3️⃣ Install Dependencies**

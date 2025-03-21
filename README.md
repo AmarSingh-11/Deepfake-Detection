@@ -70,12 +70,20 @@ git clone https://github.com/AmarSingh-11/deepfake-detection.git
 cd deepfake-detection
 ```
 
-### **2️⃣ Install Dependencies**
+### **2️⃣ Create and Activate a Virtual Environment**
+```bash
+python -m venv deepfake-env
+source deepfake-env/bin/activate  # On macOS/Linux
+# On Windows, use:
+# deepfake-env\Scripts\activate
+```
+
+### **3️⃣ Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### **3️⃣ Run the Web App**
+### **4️⃣ Run the Web App**
 ```bash
 python app.py
 ```
@@ -128,3 +136,4 @@ print(response.json())
 ---
 
 ### ⭐ If you find this project useful, give it a star! ⭐
+
